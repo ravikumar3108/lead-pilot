@@ -9,7 +9,7 @@ import {
   Sparkles,
   CheckCircle2,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function Login() {
@@ -606,9 +606,9 @@ export default function Login() {
               text-[#6F9186]
             "
             >
-              Don't have an account?{" "}
-              <button
-                type="button"
+              Don't have an account?
+              <Link
+                to={"/register"}
                 className="
                   font-medium
                   text-[#A9DDCC]
@@ -616,7 +616,7 @@ export default function Login() {
                 "
               >
                 Create account
-              </button>
+              </Link>
             </p>
 
             {/* Footer */}
